@@ -3,9 +3,8 @@ const holes = [...document.querySelectorAll('.hole')]
 const scoreEl = document.querySelector('.score span')
 const time = document.querySelector('.time span')
 let score = 0
-let tijd = 15
+let tijd = 30
 
-const sound = new Audio("assets/smash.mp3")
 
 function run(){
     const i = Math.floor(Math.random() * holes.length)
@@ -18,7 +17,6 @@ function run(){
 
     img.addEventListener('click', () => {
         score += 1
-        sound.play()
         scoreEl.textContent = score
         img.src = 'assets/dead.png'
         clearTimeout(timer)
@@ -40,9 +38,12 @@ run()
 
 function gameTimer(){
     if (tijd == 0){
-      tijd = 15;
-        alert('De Tijd Is Om')
-        clearInterval(gameTimer)
+    tijd = 30;
+    score = 0;
+    scoreEl.textContent = score;
+    alert('De Tijd Is Om')
+    clearInterval(gameTimer)
+        
         
     
     }
@@ -52,6 +53,8 @@ function gameTimer(){
 }
 
 setInterval(gameTimer, 1000);
+
+gameTimer()
 
 window.addEventListener('mousemove', e => {
     cursor.style.top = e.pageY + 'px'
