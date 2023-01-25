@@ -1,0 +1,56 @@
+.links-unordered {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .links-unordered {
+    margin-top: 20px;
+    min-height: 30px;
+  }
+  
+  .links-unordered .toggle-button {
+    text-decoration: none;
+    padding: 12px 16px 12px 16px;
+    transition: 0.2s;
+    border: 1px solid black;
+  }
+  
+  .links-unordered .toggle-button:hover,
+  .links-unordered .toggle-button:active,
+  .links-unordered .toggle-button:focus,
+  .links-unordered .toggle-button:visited {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .links-unordered .toggle-button:hover {
+    border-width: 2px;
+  }
+  
+  .links-unordered ul {
+    position: absolute;
+    top: 10px;
+    margin-top: 25px;
+    padding-inline-start: 20px;
+  }
+  
+  .links-unordered ul li {
+    line-height: 25px;
+    padding-left: 15px;
+  }
+  
+  .links-unordered a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .language-button {
+    position:relative;
+    top:0;
+    right:0;
+    
+}
+.background-image{
+  width: 100px;
+}
+
